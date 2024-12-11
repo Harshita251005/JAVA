@@ -1,6 +1,18 @@
 import java.util.Scanner;
 
 public class Condition_loop {
+    // public static boolean prime(int a) {
+    // if (a < 2) {
+    // return false;
+    // }
+    // for (int i = 2; i < a; i++) {
+    // if (a % i == 0) {
+    // return false;
+    // }
+    // }
+    // return true;
+    // }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         // int age = sc.nextInt();
@@ -55,19 +67,53 @@ public class Condition_loop {
 
         // int n = sc.nextInt();
         // if (n % 2 == 0) {
-        //     System.out.println("n is even");
+        // System.out.println("n is even");
         // } else {
-        //     System.out.println("n is odd");
+        // System.out.println("n is odd");
         // }
         // for(int i=0;i<20;i=i+2)
         // {
-        //     System.out.println(i);
+        // System.out.println(i);
         // }
         // int i=0;
         // while(i<20)
         // {
-        //     System.out.println(i);
-        //     i=i+2;
+        // System.out.println(i);
+        // i=i+2;
+        // }
+
+
+        // int n= sc.nextInt();
+        // int a=0;
+        // int b=1;
+        // System.out.print(a + "" + b + "");
+        // for(int i=3;i<=n;i++)
+        // {
+        // int c=a+b;
+        // System.out.print(c);
+        // a=b;
+        // b=c;
+        // }
+
+        // int n = sc.nextInt();
+        // for (int i = 2; i < n; i++) {
+        // if (prime(i)) {
+        // System.out.println(i);
+        // }
+        // }
+
+
+        
+        // int n = sc.nextInt();
+        // int rem;
+        // int a = 0;
+        // for (int i = 0; i < n; i++) {
+        //     while (n != 0) {
+        //         rem = n % 10;
+        //         a = rem + a * 10;
+        //         n = n / 10;
+        //     }
+        //     System.out.println(a);
         // }
         sc.close();
     }

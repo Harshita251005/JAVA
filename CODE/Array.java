@@ -119,6 +119,22 @@ public class Array {
         //     }
         // }
         // System.out.println(" index is : [" + row_index + "]" + "[" + col_index + "]");
+
+        //TIC TAC TOE
+
+        System.out.println("Welcome To Tic Tac Toe");
+        int n=3;
+        int m=3;
+        char [][] arr=new char [n][m];
+        System.out.println("Enter Your Input: ");
+        for(int i=0;i<n;i++){
+            for(int j=0;j<m;j++)
+            {
+
+            }
+        }
+        
         sc.close();
     }
 }
+
