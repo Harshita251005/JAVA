@@ -236,6 +236,84 @@ public class Alphabet {
         // c.toString();
         // System.out.println(c);
 
+
+        //palidrome
+
+        // String str=sc.nextLine();
+        // boolean flag = true;
+        // for(int i=0;i<str.length();i++)
+        // {
+        //     if(str.charAt(i)!=str.charAt(str.length()-i-1))
+        //     {
+        //         flag=false;
+        //     }
+
+        // }
+        // if(flag==true)
+        // {
+        //     System.out.println("Palidrome");
+        // }
+        // else{
+        //     System.out.println("Not Palidrome");
+        // }
+        
+
+
+        //String buffer
+        //mutable
+        //threads safe -> uses Synchronisation techniques like FIFO LIFO, PRIORITY
+
+//        StringBuffer a = new StringBuffer("abcde");
+//        a.append("null");
+//        System.out.println(a);
+//
+//        //length
+//        a.length();
+//
+//        //char at Index
+//        a.charAt(3);
+//
+//        //set char
+//        a.setCharAt(1,'a');
+//
+//        //insert
+//        a.insert(1,"meow");
+//
+//        //deleteCharAt(index)
+//        a.deleteCharAt(3);
+//
+//        //substring
+//        a.substring(1);
+//        a.substring(1,5);
+//
+//        //delete(begin,end)
+//        a.delete(1,5);
+//
+//        //replace substring
+//        a.replace(1,4,"ansh");
+//
+//        //convert toString
+//        a.toString();
+//
+//        //convert to string Builder
+//        String temp = a.toString();
+//        StringBuilder b = new StringBuilder(temp);
+
+
+        //q. Input a string toggle uppercase nd lowercase alphabets
+
+        // String a = sc.nextLine();
+        // StringBuffer str = new StringBuffer(a);
+        // for(int i = 0;i<a.length();i++){
+        //     if(str.charAt(i)<='z' &&str.charAt(i)>='a'){
+        //         str.setCharAt(i,Character.toUpperCase(str.charAt(i)));
+        //     }
+        //     else{
+        //         str.setCharAt(i,Character.toLowerCase(str.charAt(i)));
+        //     }
+        // }
+        // System.out.println(str);
+
         sc.close();
     }
 }
