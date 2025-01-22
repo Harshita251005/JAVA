@@ -314,6 +314,41 @@ public class Alphabet {
         // }
         // System.out.println(str);
 
+
+
+//         String s = sc.nextLine();
+//        int cnt = 0;
+//        for(int i = 0; i < s.length(); i++){
+//            for(int j = i+1; j <= s.length(); j++){
+//                if(pal(s.substring(i, j))){
+//                    cnt++;
+//                }
+//            }
+//        }
+//        System.out.println(cnt);
+//         int ans = 0;
+//         for(int i = 0; i < s.length(); i++){
+//             int left = i,right = i;
+//             while(left!=-1 && right!=s.length() &&s.charAt(left) == s.charAt(right)){
+//                 ans++;
+//                 left--;
+//                 right++;
+
+//             }
+//             if(s.length()==1){
+//                 break;
+//             }
+//             left = i;
+//             right = i+1;
+//             while(left!=-1 && right!=s.length() &&s.charAt(left) == s.charAt(right)){
+//                 ans++;
+//                 left--;
+//                 right++;
+
+//             }
+//         }
+//         System.out.println(ans);
+
         sc.close();
     }
 }
