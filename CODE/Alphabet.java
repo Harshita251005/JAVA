@@ -349,6 +349,76 @@ public class Alphabet {
 //         }
 //         System.out.println(ans);
 
+
+        // String a = sc.nextLine();
+        //find length of all good substring
+//        int max = 0;
+//        for(int i = 0; i < a.length(); i++){
+//            for(int j = i+1;j<a.length();j++){
+//                String temp = a.substring(i, j);
+////                System.out.println(temp);
+//                boolean flag = true;
+//                for(int k = 0;k<temp.length();k++){
+//                    if(temp.charAt(k)!='a' &&temp.charAt(k)!='e' &&temp.charAt(k)!='i' &&temp.charAt(k)!='o' &&temp.charAt(k)!='u'){
+//                        flag = false;
+//                        break;
+//                    }
+//                }
+//                if(flag){
+////                    System.out.println(temp + " with len: "+temp.length());
+//                       max =  Math.max(max,temp.length());
+//                }
+//            }
+//        }
+//        System.out.println(max);
+//        int max = 0;
+//        for(int i = 0; i < a.length(); i++){
+//            if(a.charAt(i) == 'a' || a.charAt(i) == 'e' || a.charAt(i) == 'i' ||a.charAt(i) == 'o' || a.charAt(i) == 'u'){
+//                int left = i,right = i;
+//                while(left>=0 && right<a.length()){
+//                    if(a.charAt(left) == 'a' || a.charAt(left) == 'e' || a.charAt(left) == 'i' || a.charAt(left) == 'o' || a.charAt(left) == 'u' &&((a.charAt(right) == 'a' || a.charAt(right) == 'e' || a.charAt(right) == 'i' ||a.charAt(right) == 'o' || a.charAt(right) == 'u'))){
+//                        left--;
+//                        right++;
+//
+//                    }
+//                    if(a.charAt(left) == 'a' || a.charAt(left) == 'e' || a.charAt(left) == 'i' || a.charAt(left) == 'o' || a.charAt(left) == 'u'){
+//                        left--;
+//                    }
+//                    else if(a.charAt(right) == 'a' || a.charAt(right) == 'e' || a.charAt(right) == 'i' ||a.charAt(right) == 'o' || a.charAt(right) == 'u'){
+//                        right++;
+//                    }
+//                    else{
+//                        i+=right;
+//                        break;
+//                    }
+//                    max = Math.max(max, right-left);
+//                }
+//            }
+//        }
+//        System.out.println(max);
+//        int i = 0;
+//        int len = 0;
+//        int ans = 0;
+//        while(i<a.length()) {
+//            if(a.charAt(i) == 'a' || a.charAt(i) == 'e' || a.charAt(i) == 'i' ||a.charAt(i) == 'o' || a.charAt(i) == 'u'){
+//                len++;
+//
+//            }
+//            else{
+//                ans = Math.max(len,ans);
+//                len = 0;
+//            }
+//            i++;
+//        }
+//        System.out.println(ans);
+
+        //string tokenizer
+        // String b = sc.nextLine();
+        // StringTokenizer st = new StringTokenizer(a," ");//it takes string and delimiter
+        // while(st.hasMoreTokens()){
+        //     System.out.println(st.nextToken());
+        // }
+
         sc.close();
     }
 }
