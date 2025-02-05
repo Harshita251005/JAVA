@@ -471,3 +471,225 @@
 //         e1.print();
 //     }
 // }
+
+
+// import java.util.Scanner;
+
+// public class Class26 {
+//     //Polymorphism ->
+//     //many forms
+//     //a function can be declared by multiple ways
+
+//     //types og polymorphism->
+//     //1. Compile time->
+//     //->executes at compile time.
+//     //->function declaration must be different.
+//     //eg-> same bowler bowling pace and spin with different run-up
+//     //achieved by method-overloading.
+
+
+//     //2. Run Time->
+//     //executes at run-time
+//     //function declaration is almost same.
+//     //eg->a pacer bowling slower with almost same bowling action.
+//     //achieved by method overriding.
+
+//     static int add(int a,int b){
+//         return a+b;
+//     }
+//     static int add(int a,int b,int c){
+//         return a+b+c;
+//     }
+    // static String add(String a,int b){
+    //     return a+b;
+    // }
+
+
+//     package Lec_26_Feb_4_OOPs;
+
+//     public class compile_time_polymorphism {
+    
+//         static int add(int a){
+//             return 10;
+//         }
+//         static int add(long a){     // overload by changing data type
+//             return 10;
+//         }
+//         static int add(int a, int b){
+//             return a + b;
+//         }
+//         static int add(int a, int b, int c){    // overloading by changing no. of arguments
+//             return a + b + c;
+//         }
+//         static int add(String a, int b){    // overloading by changing arguments type
+//             return 10;
+//         }
+//         static int add(int b, String a){    // overloading by changing arguments order
+//             return 20;
+//         }
+//         // static String add(int a, String b){  // can't overload by changing return type
+//         //     return "10";
+//         // }
+//         // static int add(int a, String b){    // can't overload by changin arguments name
+//         //     return 20;
+//         // }
+    
+//         public static void main(String[] args) {
+            
+//             int a = 10;
+//             System.out.println(add(a));
+        
+//             System.out.println(add(10));
+    
+//             System.out.println(add(10, 20));
+            
+//             System.out.println(add(10, 20, 30));
+    
+//             System.out.println(add("abc", 2));
+//             System.out.println(add(2, "abc"));
+//         }
+//     }
+
+//     package Lec_26_Feb_4_OOPs;
+
+// public class varagrs {
+//     static void print(int... a){
+//         for(int i : a){
+//             System.out.print(i + "  ");
+//         }
+//         System.out.println();
+//     }
+//     // static void print(int... a, int... b){}  // can't contain multiple varags 
+
+//     static void print(String a, int... b){  // can overload by adding arguments type
+//         System.out.println("Overloaded varargs function");
+//     }
+//     static void print(long a, int... b){}
+//     // static void print(int a, int... b){}
+
+//     // static void print(int... a, String b){}     // var args must be last parameter
+//     public static void main(String[] args) {
+        
+//         print(1,2,3);
+//         print(1,2,3,4,5,6,7);
+
+//         int[] a = {1,2,3,4,5};
+//         print(a);
+//     }
+// }
+
+
+// package Lec_27_Feb_5_OOPs;
+
+// public class final_keyword {
+//     public static void main(String[] args) {
+        
+//         final int a = 10;
+//         // a = 20;     // final variable can't be modfied
+
+//         final int b;
+//         b = 20;     // intialization
+//         // b = 30;
+//     }
+// }
+
+
+// public class Class27 {
+//     public static void main(String[] args) {
+//         //method overriding ->
+//         //-> type of runtime polymorphism
+//         //-> function signature is same
+//         //return type must be same or
+//         //can be subclass of the actual
+//         //return type (co-variant)
+//         //like shown above of getVehicle function
+
+//         //constructors can be over-ridden
+//         //static members can not be over-ridden
+//         //private members can not be over-ridden
+//         //final members can not be over-ridden
+
+//         //@Override annotation can be used while overriding (optional)
+
+// //        final keyword
+//         //we cannot change the value of any variable defined as final
+//         //->used to not allow modification on the variable
+//         //->used to not allow overriding on methods
+
+//         final int a = 10;
+// //        a = 20; //err
+
+
+// package Lec_27_Feb_5_OOPs;
+
+// class motor_vehicle{
+//     motor_vehicle(){
+//         System.out.println("Motor Vehicle");
+//     }
+//     void start(){
+//         System.out.println("switch on motor engine");
+//     }
+//     motor_vehicle get_Vehicle(){
+//         return new motor_vehicle();
+//     }
+
+//     static void print(){
+//         System.out.println("static method in parent class");
+//     }
+//     final void final_func(){
+//         System.out.println("Final function");
+//     }
+
+//     private void func(){
+//         System.out.println("private function");
+//     }
+// }
+
+// class car extends motor_vehicle{
+
+//     // motor_vehicle(){        // constructors can't be override
+//     //     System.out.println("Car Vehicle");
+//     // }
+    
+//     void func(){   // not a overridden method
+//         System.out.println("function");
+//     }
+//     void start(){
+//         System.out.println("Starts by key");
+//     }
+    
+//     // @Override    // specifies function must override method
+//     // void strt(){
+
+//     // }
+//     car get_Vehicle(){
+//         return new car();
+//     }
+
+//     // void print(){   // can't be overridden
+//     //     System.out.println("static method in parent class");
+//     // }
+
+//     static void print(){    // method hiding
+//         System.out.println("Not a overridden function");
+//     }
+
+//     // void final_func(){   // can't be overridden
+//     //     System.out.println("Final function");
+//     // }
+// }
+
+// class bike extends motor_vehicle{
+
+//     void start(){
+//         System.out.println("Starts by kick");
+//     }
+// }
+
+// public class overriding {
+//     public static void main(String[] args) {
+        
+//         car c1 = new car();
+//         c1.start();     // calls overridden method
+//     }
+// }
