@@ -115,7 +115,6 @@ import java.util.*;
 //     }
 // }
 
-
 // public class Recursion {
 
 //     public static int first = -1;
@@ -144,8 +143,6 @@ import java.util.*;
 //     }
 // }
 
-
-
 // public class Recursion{
 
 //     public static boolean isSorted(int arr[], int idx){
@@ -167,8 +164,6 @@ import java.util.*;
 //         System.out.println(isSorted(arr, 0));
 //     }
 // }
-
-
 
 // public class Recursion{
 
@@ -199,7 +194,6 @@ import java.util.*;
 //     }
 // }
 
-
 // public class Recursion{
 
 //     public static boolean[] map = new boolean[26];
@@ -228,8 +222,6 @@ import java.util.*;
 //     }
 // }
 
-
-
 // public class Recursion{
 
 //     public static void subsequence(String str, int idx, String newString){
@@ -249,9 +241,6 @@ import java.util.*;
 //         subsequence(str,0, "");
 //     }
 // }
-
-
-
 
 // public class Recursion{
 
@@ -281,9 +270,6 @@ import java.util.*;
 //     }
 // }
 
-
-
-
 // public class Recursion{
 
 //     public static String[] keypad = {".", "abc", "def", "ghi", "jkl", "mon", "pqrs"," tu" ," vwx", "yz"};
@@ -310,10 +296,7 @@ import java.util.*;
 //     }
 // }
 
-
-
 // public class Recursion{
-
 
 //     public static void printPerm(String str,String permutation){
 //         if(str.length()==0)
@@ -335,9 +318,6 @@ import java.util.*;
 //         printPerm(str, "");
 //     }
 // }
-
-
-
 
 // public class Recursion{
 
@@ -362,8 +342,6 @@ import java.util.*;
 //     }
 // }
 
-
-
 // public class Recursion{
 
 //     public static int placeTiles(int n, int m){
@@ -386,7 +364,6 @@ import java.util.*;
 //     }
 // }
 
-
 // public class Recursion{
 
 //     public static int callGuest(int n){
@@ -394,7 +371,7 @@ import java.util.*;
 //         {
 //             return 1;
 //         }
-        
+
 //         int way1 = callGuest(n-1);
 //         int way2= (n-1) * callGuest(n-2);
 //         return way1 + way2;
@@ -406,4 +383,52 @@ import java.util.*;
 //     }
 // }
 
+// public class Recursion {
+//     public static void printSubset(ArrayList<Integer> subset) {
+//         for (int i = 0; i < subset.size(); i++) {  // Fixed loop
+//             System.out.print(subset.get(i) + " ");
+//         }
+//         System.out.println();
+//     }
 
+//     public static void findSubsets(int n, ArrayList<Integer> subset) {
+//         if (n == 0) {
+//             printSubset(subset);
+//             return;
+//         }
+//         // Include the element
+//         subset.add(n);
+//         findSubsets(n - 1, subset);
+
+//         // Exclude the element (backtracking)
+//         subset.remove(subset.size() - 1);
+//         findSubsets(n - 1, subset);
+//     }
+
+//     public static void main(String[] args) {
+//         int n = 3;
+//         ArrayList<Integer> subset = new ArrayList<>(); // Fixed declaration
+//         findSubsets(n, subset);
+//     }
+// }
+
+//Backtracking
+
+// class Backtracking {
+//     public static void printPermutation(String str, String perm, int idx) {
+//         if (str.length() == 0) {
+//             System.out.println(perm);
+//             return;
+//         }
+//         for (int i = 0; i < str.length(); i++) {
+//             char currChar = str.charAt(i);
+//             String newStr = str.substring(0, i) + str.substring(i + 1);
+//             printPermutation(newStr, perm + currChar, idx + 1);
+//         }
+//     }
+
+//     public static void main(String[] args) {
+//         String str = "ABC";
+//         printPermutation(str, "", 0);
+//     }
+// }
