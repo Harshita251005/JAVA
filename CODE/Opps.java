@@ -1065,3 +1065,173 @@
 //         // }
 //     }
 // }
+
+
+
+// package Lec_33_Feb_17_OOPs;
+
+// interface A{
+//     // int a;   // interface have constant by default
+//     int a = 10;
+
+//     // A(){     // don't have constructors in interface
+//     //     a = 10;
+//     // }
+
+//     void display();
+// }
+
+// // class B extends A{      // class implements interface , not extends
+// class B implements A{    
+//     // void display(){     // access modifier will be public as interface has public access modifier
+//     public void display(){    
+//         System.out.println("Hello");
+//     }
+// }
+
+// public class question2 {
+//     public static void main(String[] args) {
+        
+//     }
+// }
+
+
+// package Lec_33_Feb_17_OOPs;
+
+// abstract class A{
+//     int a;
+//     A(int a){
+//         this.a = a;
+//     }
+//     A(){
+        
+//     }
+// }
+// class B extends A{
+//     int b;
+//     // B(){
+//     //     super(10);
+//     // }
+//     // B(int a){
+//     //     super(a);
+//     // }
+//     // B(int a, int b)
+//     // {   
+//     //     super(a);
+//     //     this.b = b;
+//     // }
+// }
+
+// public class questions {
+//     public static void main(String[] args) {
+        
+//     }
+// }
+
+
+// package Lec_35_Feb_19_OOPS;
+
+// public class wrapper_class {
+//     public static void main(String[] args) {
+        
+//         Integer a = new Integer(10);
+//         Integer b = 10;
+//         System.out.println(Integer.min(a, b));
+//         System.out.println(Integer.max(a, 10));
+
+//         String str = "12345";
+//         int c = Integer.parseInt(str);  // converts string to integer
+//         System.out.println(c);
+
+//         str = "101010";
+//         int decimal = Integer.parseInt(str, 2); // converts binary string to decimal
+//         System.out.println("Decimal value of " + str + " is : " + decimal);
+
+//         str = Integer.toBinaryString(10);   // converts decimal to binary string
+
+//         str = Integer.toString(12345);  // converts decimal to string
+
+//         char ch = 'a';
+//         if(Character.isLetter(ch)){
+//             System.out.println("ch is a letter");
+//         }
+//         else if(Character.isLowerCase(ch)){
+//             System.out.println("ch is in range a - z");
+//         }
+//         else if(Character.isUpperCase(ch)){
+//             System.out.println("ch is in range A - Z");
+//         }
+//     }
+// }
+
+
+// package Lec_36_Feb_20_OOPs;
+
+// import java.util.ArrayList;
+// import java.util.Collections;
+
+// class G_24 implements Comparable<G_24>{
+//     String name;
+//     int marks;
+//     G_24(String name, int marks){
+//         this.name = name;
+//         this.marks = marks;
+//     }
+
+//     @Override
+//     public int compareTo(G_24 obj2){
+//         return Integer.compare(this.marks, obj2.marks);
+//     }
+// }
+
+// public class comparable {
+//     public static void main(String[] args) {
+        
+//         ArrayList<G_24> arr = new ArrayList<>();
+//         arr.add(new G_24("Jai",62));
+//         arr.add(new G_24("Satyam",72));
+
+//         Collections.sort(arr);
+//     }
+// }
+
+
+// package Lec_36_Feb_20_OOPs;
+
+// import java.util.ArrayList;
+// import java.util.Collections;
+// import java.util.Comparator;
+
+// class Group_24{
+//     String name;
+//     int marks;
+//     Group_24(String name, int marks){
+//         this.name = name;
+//         this.marks = marks;
+//     }
+// }
+
+// class SortByMarks implements Comparator<Group_24>{
+//     @Override
+//     public int compare(Group_24 obj1, Group_24 obj2){
+//         return Integer.compare(obj1.marks, obj2.marks);
+//     }
+// }
+
+// class SortByName implements Comparator<Group_24>{
+//     @Override
+//     public int compare(Group_24 obj1, Group_24 obj2){
+//         return obj1.name.compareTo(obj2.name);
+//     }
+// }
+
+// public class comparator {
+//     public static void main(String[] args) {
+        
+//         ArrayList<Group_24> arr = new ArrayList<>();
+//         arr.add(new Group_24("Jai",62));
+//         arr.add(new Group_24("Satyam",72));
+
+//         Collections.sort(arr, new SortByMarks());
+//     }
+// }
