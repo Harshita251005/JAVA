@@ -260,3 +260,236 @@
 //         System.out.println("Max length of consecutive sequence is " + maxLen);
 //     }
 // }
+
+
+
+// package Lec_45_Mar_17_ExpHandling;
+
+// import java.util.Scanner;
+
+// public class try_catch {
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         int a=0, b;
+//         try{
+//             a = sc.nextInt();
+//             b = sc.nextInt();
+//             int c = a / b;
+//             System.out.println(c);
+
+//             // try{
+//                 int[] arr = new int[2];
+//                 System.out.println(arr[2]);
+//             // }
+//             // catch(ArrayIndexOutOfBoundsException ex){
+//             //     System.out.println(ex.getMessage());
+//             // }
+//         }
+//         catch(ArrayIndexOutOfBoundsException ex){
+//             System.out.println(ex.getMessage());
+//         }
+//         catch(ArithmeticException ex){
+//             System.out.println("Can't divide by zero");
+//             System.out.println("Please provide another value for second num : ");
+//             b = sc.nextInt();
+//             System.out.println(a / b);
+//         }
+//         finally{
+//             System.out.println("Always Executed");
+//         }
+
+//         System.out.println("Hello all !!");
+//     }
+// }
+
+
+// package Lec_46_Mar_18_ExpHandling;
+
+// import java.io.FileNotFoundException;
+// import java.io.FileReader;
+
+// public class throw_throws {
+//     static void function() throws FileNotFoundException{
+//         FileReader file = new FileReader("Test.txt");
+
+//         try{
+//             int[] arr = new int[3];
+//             System.out.println(arr[4]);
+//         }
+//         catch(ArrayIndexOutOfBoundsException ex){
+//             // throw ex;
+//             throw new ArrayIndexOutOfBoundsException("Invalid index");
+//         }
+//     }
+//     public static void main(String[] args) {
+//         try{
+//             function();
+//         }
+//         catch(FileNotFoundException ex){
+//             System.out.println(ex.getMessage());
+//         }
+//         catch(ArrayIndexOutOfBoundsException ex){
+//             System.out.println(ex.getMessage());
+//         }
+//     }
+// }
+
+// package Lec_46_Mar_18_ExpHandling;
+
+// import java.util.Scanner;
+
+// public class while_tryCatch {
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         int a = sc.nextInt();
+//         int b;
+//         while(true){
+//             try{
+//                 b = sc.nextInt();
+//                 System.out.println(a / b);
+//                 break;
+//             }
+//             catch(ArithmeticException ex){
+//                 System.out.println(ex.getMessage());
+//                 System.out.println("Enter number again");
+//             }
+//         }
+//     }
+// }
+
+
+// package Lec_47_Mar_ExpHandling;
+// import java.io.FileNotFoundException;
+// import java.io.IOException;
+
+// class parent{
+//     void NonExceptionFunction(){
+//         System.out.println("Doesn't exception");
+//     }
+//     void ExceptionFunction() throws IOException{
+//         System.out.println("Throws Exception");
+//     }
+// }
+// class child1 extends parent{
+//     // @Override
+//     // void NonExceptionFunction() throws IOException{ 
+//     //     // can't throw Checked Exception if parent class method doesn't throw any
+//     //     System.out.println("throws exception");
+//     // }
+//     @Override
+//     void ExceptionFunction() throws FileNotFoundException{
+//         System.out.println("Can throw subclass of thrown Exception");
+//     }
+// }
+// class child2 extends parent{
+//     @Override
+//     void NonExceptionFunction() throws ArithmeticException{
+//         // can throw unchecked Exception
+//         System.out.println("throws exception");
+//     }
+// //     @Override
+// //     void ExceptionFunction() throws Exception{
+// //         System.out.println("Can throw subclass of thrown Exception");
+// //     }
+// // }
+
+// public class ExpHandleInOverring {
+//     public static void main(String[] args) {
+        
+//     }    
+// }
+
+// package Lec_47_Mar_ExpHandling;
+
+// public class Questoin {
+//     public static void main(String[] args) {
+        
+//         try{
+//             int[] arr = new int[3];
+//             System.out.println(arr[3]);
+//         }
+//         catch(ArithmeticException ex){
+//             System.out.println("Index out of bound");
+//         }
+//         finally{
+//             System.out.println("Finally Block");
+//         }
+//         System.out.println("Hello !!");
+//     }
+// }
+
+
+// package Lec_47_Mar_ExpHandling;
+
+// import javax.naming.InsufficientResourcesException;
+
+// class InsufficientBalance extends Exception{
+//     InsufficientBalance(String msg){
+//         super(msg);
+//     }
+// }
+// class InvalidSenderUPI extends RuntimeException{
+//     private int errorCode;
+//     InvalidSenderUPI(int code, String msg){
+//         super(msg);
+//         this.errorCode = code;
+//     }
+//     int getErrorCode(){
+//         return this.errorCode;
+//     }
+// }
+// public class customException {
+//     static void sendMoney(int amount, String UPI) throws InsufficientBalance{
+//         if(amount > 500){
+//             throw new InsufficientBalance("Not enoungh Balance in your account");
+//         }
+//         if(!UPI.equals("7982143632")){
+//             throw new InvalidSenderUPI(201, "Enter Valid UPI id");
+//         }
+//     }
+//     public static void main(String[] args) {
+        
+//     }
+// }
+
+
+// package Lec_48_Mar_20_;
+
+// import java.util.Scanner;
+
+// public class count_set_bits {
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         int n = sc.nextInt();
+
+//         int cnt = 0;
+//         while (n > 0) {
+//             cnt += n & 1;
+//             n = n >> 1;
+//         }
+//         System.out.println(cnt);
+//     }
+// }
+
+// package Lec_48_Mar_20_;
+
+// import java.util.Scanner;
+
+// public class toggleBits {
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         int n = sc.nextInt();
+//         // creating mask (Number having 2nd, 4th, 5th, 8th, 11th bit 1)
+//         int mask = 0;
+//         for(int i=11 ; i>0 ; i--){
+//             if(i==11 || i==8 || i==5 || i==4 || i==2){
+//                 mask = mask | 1;
+//             }
+//             mask = mask << 1;
+//         }
+
+//         // number with toggled bits
+//         int ans = n ^ mask;
+//         System.out.println(ans);
+//     }
+// }
