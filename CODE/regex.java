@@ -304,3 +304,118 @@
 //         System.out.println(LondonTime);
 //     }
 // }
+
+
+// package Lec_56_April_24_FileHandling;
+// import java.io.File;
+// import java.io.FileWriter;
+// import java.io.IOException;
+// import java.util.Scanner;
+
+// public class fileHandling {
+//     public static void main(String[] args) {
+        
+//         try {
+//             File file = new File("example.txt");
+
+//             // creating a new file
+//             if(file.createNewFile()){
+//                 System.out.println("File Created !!");
+//             }
+//             else{
+//                 System.out.println("File already exists !!");
+//             }
+
+//             // writing in a file
+//             FileWriter writer = new FileWriter(file, true);
+//             writer.write("/nEe saala cup namde!");
+//             writer.close();
+
+//             // reading a file
+//             Scanner reader = new Scanner(file);
+//             while(reader.hasNextLine()){
+//                 String str = reader.nextLine();
+//                 System.out.println(str);
+//             }
+//             reader.close();
+            
+//             // delete a file
+//             if(file.delete()){
+//                 System.out.println("File Deleted !!");
+//             }
+//             else{
+//                 System.out.println("File can't be deleted !!");
+//             }
+//         } 
+//         catch (IOException e) {
+//             System.out.println("File error");
+//             e.printStackTrace();
+//         }
+//     }
+// }
+
+
+// package Lec_56_April_24_FileHandling;
+
+// import java.io.File;
+
+// public class removeSingleLineComments {
+//     public static void main(String[] args) {
+        
+//         File oldFile = new File("text.txt");
+//         File newFile = new File("updated.txt"); // for new file
+
+//         // create newFile
+
+//         // read oldFile (using reader for newOld)
+//             // update lines using regex
+//             // write line in newFile (using writer for newFile)
+
+//     }
+// }
+
+// package Lec_56_April_24_FileHandling;
+// public class test {
+//     public static void main(String[] args) {
+        
+//         // comments
+//         System.out.println("Hello World");  // prints Hello World
+//     }
+// }
+
+
+// package Lec_57_April_26_FileHandling;
+
+// import java.io.File;
+// import java.util.Scanner;
+
+// public class printDuplicates {
+//     static void printDuplicateWords(String filePath){
+//         File file = new File(filePath);
+//         try {
+//             Scanner reader = new Scanner(file);
+//             while(reader.hasNextLine()){
+//                 String line = reader.nextLine();
+//                 String[] words = line.split("\\s+");
+//                 for(int i=0 ; i<words.length ; i++){
+//                     int cnt = 1;
+//                     while(i+1<words.length && words[i].equals(words[i+1])){
+//                         cnt++;
+//                         i++;
+//                     }
+//                     if(cnt > 1){
+//                         System.out.print(words[i] + "*" + cnt + " ");
+//                     }
+//                 }
+//                 System.out.println();
+//             }
+//         } catch (Exception e) {
+//             e.printStackTrace();
+//         }
+//     }
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         String filePath = sc.nextLine();
+//         printDuplicateWords(filePath);
+//     }
+// }
